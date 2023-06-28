@@ -10,6 +10,7 @@ import {
   Groups,
   LocalMall,
 } from "@mui/icons-material";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Dashboard = () => {
   const authCtx = useContext(AuthContext);
@@ -40,6 +41,10 @@ const Dashboard = () => {
 
   const shopHandler = async () => {
     navigate("/shop");
+  };
+
+  const mapHandler = async () => {
+    navigate("/map");
   };
 
   return (
@@ -288,6 +293,29 @@ const Dashboard = () => {
                   onClick={ordersHandler}
                 >
                   Orders
+                </Button>
+              </Box>
+              <Box sx={{ m: 2, backgroundColor: "#243b55" }}>
+                <Button
+                  sx={{
+                    color: "#141e30",
+                    fontSize: "30px",
+                    padding: "20px 30px",
+                    "&:hover": {
+                      backgroundColor: "#03e9f4",
+                    },
+                  }}
+                  variant="contained"
+                  startIcon={
+                    <LocationOnIcon
+                      sx={{ fontSize: "40px", width: "40px", height: "40px" }}
+                    />
+                  }
+                  size="large"
+                  color="primary"
+                  onClick={mapHandler}
+                >
+                  Map
                 </Button>
               </Box>
             </>

@@ -106,7 +106,7 @@ const Checkout = ({ open, onClose }) => {
               justifyContent: "center",
               alignItems: "center",
             }}>
-              <PayPal data={data}/>
+              <PayPal data={data} onClose={onClose}/>
           </Box>
         </Box>
       </Box>

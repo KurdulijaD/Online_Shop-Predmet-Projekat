@@ -13,6 +13,7 @@ namespace Online_Shop.Models
         public DateTime OrderTime { get; set; }
         public DateTime DeliveryTime { get; set; }
         public EOrderStatus Status { get; set; }
+        public bool Approved { get; set; }
         public List<OrderProduct>? OrderProducts { get; set; }
         public User? User { get; set; }
         public int UserId { get; set; }
